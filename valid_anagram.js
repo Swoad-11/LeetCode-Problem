@@ -5,24 +5,23 @@ var isAnagram = function (s, t) {
     if (s.length != t.length) {
         return false;
     }
-    else if (s == t) {
-        return true;
-    }
     else {
         for (let i = 0; i < s.length; i++) {
             S[i] = s[i];
             T[i] = t[i];
         }
-
-        if (S == T) {
-            console.log(1);
+        let sortS = S.sort();
+        let sortT = T.sort();
+        for (let i = 0; i < s.length; i++) {
+            if (sortS[i] == sortT[i]) {
+                count++;
+            }
+        }
+        if (count == s.length) {
+            return true;
         }
         else
-            console.log(2);
+            return false;
     }
 
 };
-
-let s = "anagram", t = "nagaram";
-
-isAnagram(s, t);
