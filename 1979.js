@@ -9,7 +9,7 @@ var gcd = function (a, b) {
     if (a == 0)
         return b;
     if (b == 0)
-        return a; e
+        return a;
     if (a == b)
         return a;
     if (a > b)
